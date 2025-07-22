@@ -17,4 +17,7 @@ export class TeamComponent {
   filter(role: string) {
     this.teamService.filteredMemberByRole(role);
   }
+  resetFilter() {
+    this.teamService.resetFilter();
+  }
 }
