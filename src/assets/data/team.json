@@ -4,69 +4,79 @@
     "name": "Maha Fathy",
     "role": "Frontend Developer",
     "status": "Active",
-    "performance": 85
+    "performance": 85,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 2,
     "name": "Ahmed Mohamed",
     "role": "Backend Developer",
     "status": "Inactive",
-    "performance": 72
+    "performance": 72,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 3,
     "name": "Sara Adel",
     "role": "UI/UX Designer",
     "status": "Active",
-    "performance": 95
+    "performance": 95,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 4,
     "name": "Hassan Ali",
     "role": "UI/UX Designer",
     "status": "Active",
-    "performance": 78
+    "performance": 78,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 5,
     "name": "Noha Saeed",
     "role": "Frontend Developer",
     "status": "Active",
-    "performance": 88
+    "performance": 88,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 6,
     "name": "Youssef Tamer",
     "role": "Backend Developer",
     "status": "Inactive",
-    "performance": 65
+    "performance": 65,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 7,
     "name": "Laila Hany",
     "role": "Backend Developer",
     "status": "Active",
-    "performance": 91
+    "performance": 91,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 8,
     "name": "Tamer Osama",
     "role": "Frontend Developer",
     "status": "Active",
-    "performance": 83
+    "performance": 83,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 9,
     "name": "Dina Ayman",
     "role": "UI/UX Designer",
     "status": "Active",
-    "performance": 89
+    "performance": 50,
+    "image": "assets/images/svg/avatar.svg"
   },
   {
     "id": 10,
     "name": "Omar Nabil",
     "role": "Backend Developer",
     "status": "Inactive",
-    "performance": 76
+    "performance": 20,
+    "image": "assets/images/svg/avatar.svg"
   }
 ]
