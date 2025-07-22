@@ -1,12 +1,12 @@
-<mat-form-field appearance="fill">
-  <mat-label>Filter by role</mat-label>
-  <mat-select (selectionChange)="filter($event.value)">
-    <mat-option value="all">All</mat-option>
-    <mat-option value="Frontend Developer">Frontend Developer</mat-option>
-    <mat-option value="Backend Developer">Backend Developer</mat-option>
-    <mat-option value="UI/UX Designer">UI/UX Designer </mat-option>
-  </mat-select>
-</mat-form-field>
+<app-filter
+  [filterOption]="[
+    'All',
+    'Frontend Developer',
+    'Backend Developer',
+    'UI/UX Designer'
+  ]"
+  (selectedFilter)="filter($event)"
+/>
 
 <div class="overflow-x-auto p-4">
   <table
@@ -58,10 +58,6 @@
         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
           {{ member.performance }}%
         </td>
-        <mat-progress-bar
-          [value]="member.performance"
-          mode="determinate"
-        ></mat-progress-bar>
       </tr>
       }
     </tbody>

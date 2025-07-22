@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
+import { MatOptionModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
@@ -19,15 +21,34 @@ const materialModules = [
   MatButtonModule,
   MatSlideToggleModule,
   MatMenuModule,
-  MatSelectModule,
   MatButtonToggleModule,
   MatCardModule,
+  MatProgressBarModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatOptionModule,
   MatProgressBarModule,
 ];
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, ...materialModules],
-  exports: [...materialModules, CommonModule, FormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    MatOptionModule,
+    ...materialModules,
+    FormsModule,
+    RouterModule,
+  ],
+  exports: [
+    ...materialModules,
+
+    MatSelectModule,
+    MatFormFieldModule,
+    MatOptionModule,
+    CommonModule,
+    FormsModule,
+
+    RouterModule,
+  ],
 })
 export class SharedModule {}
