@@ -18,4 +18,10 @@ export class TeamService {
       this.memberSubject.next(data);
     });
   }
+  filteredMemberByRole(role: string) {
+    const filteredMember = this.memberSubject.value.filter(
+      (member) => member.role === role
+    );
+    this.memberSubject.next(filteredMember);
+  }
 }
