@@ -16,8 +16,57 @@
   {
     "id": 3,
     "name": "Sara Adel",
-    "role": "UI Designer",
+    "role": "UI/UX Designer",
     "status": "Active",
     "performance": 95
+  },
+  {
+    "id": 4,
+    "name": "Hassan Ali",
+    "role": "UI/UX Designer",
+    "status": "Active",
+    "performance": 78
+  },
+  {
+    "id": 5,
+    "name": "Noha Saeed",
+    "role": "Frontend Developer",
+    "status": "Active",
+    "performance": 88
+  },
+  {
+    "id": 6,
+    "name": "Youssef Tamer",
+    "role": "Backend Developer",
+    "status": "Inactive",
+    "performance": 65
+  },
+  {
+    "id": 7,
+    "name": "Laila Hany",
+    "role": "Backend Developer",
+    "status": "Active",
+    "performance": 91
+  },
+  {
+    "id": 8,
+    "name": "Tamer Osama",
+    "role": "Frontend Developer",
+    "status": "Active",
+    "performance": 83
+  },
+  {
+    "id": 9,
+    "name": "Dina Ayman",
+    "role": "UI/UX Designer",
+    "status": "Active",
+    "performance": 89
+  },
+  {
+    "id": 10,
+    "name": "Omar Nabil",
+    "role": "Backend Developer",
+    "status": "Inactive",
+    "performance": 76
   }
 ]
