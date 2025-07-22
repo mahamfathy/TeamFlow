@@ -10,7 +10,7 @@ import { TeamService } from './services/team.service';
   styleUrls: ['./team.component.scss'],
 })
 export class TeamComponent {
-  $teamMembers?: Observable<TeamMember[]>;
+  $teamMembers: Observable<TeamMember[]>;
   constructor(private teamService: TeamService) {
     this.$teamMembers = this.teamService.member$;
   }
