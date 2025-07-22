@@ -2,10 +2,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'team',
+    path: 'dashboard',
     loadChildren: () =>
-      import('./feature/dashboard/modules/team/team.module').then(
-        (m) => m.TeamModule
+      import('./feature/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
       ),
   },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 ];
