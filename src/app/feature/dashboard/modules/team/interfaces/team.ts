@@ -4,4 +4,5 @@ export interface TeamMember {
   role: string;
   status: string;
   performance: number;
+  image: string;
 }
