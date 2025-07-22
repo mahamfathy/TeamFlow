@@ -1,20 +1,26 @@
 <div
   (click)="close.emit()"
   class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+  role="dialog"
+  aria-modal="true"
 >
   <div class="bg-white p-6 rounded-xl shadow-2xl w-[350px] relative">
     <button
+      type="button"
       (click)="close.emit()"
       class="absolute top-2 right-2 text-red-500 text-lg font-bold"
+      aria-label="Close modal"
     >
       ✕
     </button>
+
     <img
       *ngIf="member.image"
       [src]="member.image"
       alt="Member Image"
       class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-gray-300"
     />
+
     <h2 class="text-xl font-semibold mb-2">{{ member.name }}</h2>
     <p class="text-gray-600">{{ member.role }}</p>
 
@@ -34,8 +40,10 @@
     </div>
 
     <button
+      type="button"
       (click)="close.emit()"
       class="mt-4 px-4 py-2 bg-red-700 hover:bg-red-500 text-black rounded-md"
+      aria-label="Close"
     >
       Close
     </button>

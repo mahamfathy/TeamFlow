@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Accessibility Considerations
+
+This project follows accessibility best practices:
+
+- Used semantic HTML tags for better screen reader compatibility.
+- Added appropriate `aria-label`s to important interactive elements.
+- Ensured keyboard navigation across all components (buttons, filters, etc).

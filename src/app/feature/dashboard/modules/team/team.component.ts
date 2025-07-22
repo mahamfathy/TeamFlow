@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedModule } from '../../../../shared/shared.module';
 import { FilterComponent } from './components/filter/filter.component';
+import { TableComponent } from './components/table/table.component';
 import { TeamMemberCardComponent } from './components/team-member-card/team-member-card.component';
 import { TeamMember } from './interfaces/team';
 import { TeamService } from './services/team.service';
@@ -8,7 +9,12 @@ import { TeamService } from './services/team.service';
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [SharedModule, FilterComponent, TeamMemberCardComponent],
+  imports: [
+    SharedModule,
+    FilterComponent,
+    TeamMemberCardComponent,
+    TableComponent,
+  ],
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss'],
 })

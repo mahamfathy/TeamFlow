@@ -9,12 +9,17 @@ export const routes: Routes = [
     component: DashboardComponent,
     children: [
       {
-        path: '',
+        path: 'home',
         component: DashboardHomeComponentComponent,
       },
       {
         path: 'team',
         component: TeamComponent,
+      },
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
       },
     ],
   },

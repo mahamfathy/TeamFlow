@@ -8,5 +8,6 @@ export const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard/home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'dashboard/home', pathMatch: 'full' },
 ];

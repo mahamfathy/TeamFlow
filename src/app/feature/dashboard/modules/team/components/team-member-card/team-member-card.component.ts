@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  Output,
+} from '@angular/core';
 import { TeamMember } from '../../interfaces/team';
 
 @Component({
@@ -12,4 +18,9 @@ import { TeamMember } from '../../interfaces/team';
 export class TeamMemberCardComponent {
   @Input() member!: TeamMember;
   @Output() close = new EventEmitter<void>();
+  @HostListener('document:keydown.escape', ['$event'])
+  onCloseModal(event: KeyboardEvent) {
+    event.preventDefault();
+    this.close.emit();
+  }
 }
