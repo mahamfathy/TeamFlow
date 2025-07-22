@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TeamMember } from './interfaces/team';
+import { TeamService } from './services/team.service';
 
 @Component({
   selector: 'app-team',
@@ -6,4 +9,9 @@ import { Component } from '@angular/core';
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss'],
 })
-export class TeamComponent {}
+export class TeamComponent {
+  $teamMembers?: Observable<TeamMember[]>;
+  constructor(private teamService: TeamService) {
+    this.$teamMembers = this.teamService.member$;
+  }
+}
