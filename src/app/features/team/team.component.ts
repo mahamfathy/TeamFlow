@@ -14,4 +14,7 @@ export class TeamComponent {
   constructor(private teamService: TeamService) {
     this.$teamMembers = this.teamService.member$;
   }
+  filter(role: string) {
+    this.teamService.filteredMemberByRole(role);
+  }
 }
