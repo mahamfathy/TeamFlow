@@ -1,12 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { SideNavBarComponent } from '../../shared/components/side-nav-bar/side-nav-bar.component';
 import { SharedModule } from '../../shared/shared.module';
+import { DashboardHomeComponentComponent } from './components/dashboard-home-component/dashboard-home-component.component';
 import { DashboardComponent } from './dashboard.component';
-import { TeamModule } from './modules/team/team.module';
+import { routes } from './dashboard.routes';
 
 @NgModule({
-  declarations: [DashboardComponent],
-  imports: [CommonModule, TeamModule, SharedModule],
+  declarations: [
+    DashboardComponent,
+    DashboardHomeComponentComponent,
+    SideNavBarComponent,
+  ],
+  imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
   exports: [DashboardComponent],
 })
 export class DashboardModule {}
