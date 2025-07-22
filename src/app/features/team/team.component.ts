@@ -11,8 +11,17 @@ import { TeamService } from './services/team.service';
 })
 export class TeamComponent {
   $teamMembers: Observable<TeamMember[]>;
+  dropdownOpen = false;
+
   constructor(private teamService: TeamService) {
     this.$teamMembers = this.teamService.member$;
+  }
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  closeDropdown() {
+    this.dropdownOpen = false;
   }
   filter(role: string) {
     this.teamService.filteredMemberByRole(role);

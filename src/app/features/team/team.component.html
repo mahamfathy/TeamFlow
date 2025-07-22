@@ -1,1 +1,54 @@
-<p>team works!</p>
+<div class="relative inline-block text-left">
+  <div>
+    <button
+      (click)="toggleDropdown()"
+      type="button"
+      class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+      id="options-menu"
+    >
+      Filter
+      <svg
+        class="-mr-1 ml-2 h-5 w-5"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Dropdown menu -->
+  <div
+    *ngIf="dropdownOpen"
+    class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+  >
+    >
+    <div class="py-1" role="menu">
+      <a
+        (click)="resetFilter(); closeDropdown()"
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
+        role="menuitem"
+        >All</a
+      >
+      <a
+        (click)="filter('Frontend Developer'); closeDropdown()"
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
+        role="menuitem"
+        >Frontend</a
+      >
+      <a
+        (click)="filter('Backend Developer'); closeDropdown()"
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
+        role="menuitem"
+        >Backend</a
+      >
+    </div>
+  </div>
+</div>
