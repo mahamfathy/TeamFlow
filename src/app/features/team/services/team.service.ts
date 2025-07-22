@@ -11,9 +11,9 @@ export class TeamService {
   private memberSubject = new BehaviorSubject<TeamMember[]>([]);
   member$ = this.memberSubject.asObservable();
   constructor(private http: HttpClient) {
-    this.loadTeamMebers();
+    this.loadTeamMembers();
   }
-  loadTeamMebers() {
+  loadTeamMembers() {
     this.http.get<TeamMember[]>(this.dataUrl).subscribe((data) => {
       this.memberSubject.next(data);
     });
@@ -23,5 +23,8 @@ export class TeamService {
       (member) => member.role === role
     );
     this.memberSubject.next(filteredMember);
+  }
+  resetFilter() {
+    this.loadTeamMembers();
   }
 }
