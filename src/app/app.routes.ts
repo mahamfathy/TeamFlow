@@ -4,6 +4,8 @@ export const routes: Routes = [
   {
     path: 'team',
     loadChildren: () =>
-      import('./features/team/team.module').then((m) => m.TeamModule),
+      import('./feature/dashboard/modules/team/team.module').then(
+        (m) => m.TeamModule
+      ),
   },
 ];
