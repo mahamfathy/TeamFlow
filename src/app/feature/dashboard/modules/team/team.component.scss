@@ -1,0 +1,11 @@
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  @media (max-width: 600px) {
+    font-size: 12px;
+    td,
+    th {
+      padding: 4px;
+    }
+  }
+}

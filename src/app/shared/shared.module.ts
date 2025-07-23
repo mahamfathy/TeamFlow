@@ -33,21 +33,19 @@ const materialModules = [
 @NgModule({
   declarations: [],
   imports: [
+    ...materialModules,
     CommonModule,
     MatOptionModule,
-    ...materialModules,
     FormsModule,
     RouterModule,
   ],
   exports: [
     ...materialModules,
-
     MatSelectModule,
     MatFormFieldModule,
     MatOptionModule,
     CommonModule,
     FormsModule,
-
     RouterModule,
   ],
 })

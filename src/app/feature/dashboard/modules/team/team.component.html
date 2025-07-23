@@ -8,7 +8,7 @@
   (selectedFilter)="filter($event)"
 />
 
-<div class="overflow-x-auto p-4">
+<div class="overflow-x-auto table-wrapper p-4">
   <app-table (viewClicked)="selectMember($event)" [members]="filteredMembers" />
 </div>
 <div>
