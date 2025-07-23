@@ -1,22 +1,27 @@
-<app-filter
-  [filterOption]="[
-    'All',
-    'Frontend Developer',
-    'Backend Developer',
-    'UI/UX Designer'
-  ]"
-  (selectedFilter)="filter($event)"
-/>
-
-<div class="overflow-x-auto table-wrapper p-4">
-  <app-table (viewClicked)="selectMember($event)" [members]="filteredMembers" />
-</div>
-<div>
-  @if (selectedMember) {
-
-  <app-team-member-card
-    (close)="selectedMember = null"
-    [member]="selectedMember"
+<section class="h-100">
+  <app-filter
+    [filterOption]="[
+      'All',
+      'Frontend Developer',
+      'Backend Developer',
+      'UI/UX Designer'
+    ]"
+    (selectedFilter)="filter($event)"
   />
-  }
-</div>
+
+  <div class="overflow-x-auto table-wrapper p-4">
+    <app-table
+      (viewClicked)="selectMember($event)"
+      [members]="filteredMembers"
+    />
+  </div>
+  <div>
+    @if (selectedMember) {
+
+    <app-team-member-card
+      (close)="selectedMember = null"
+      [member]="selectedMember"
+    />
+    }
+  </div>
+</section>

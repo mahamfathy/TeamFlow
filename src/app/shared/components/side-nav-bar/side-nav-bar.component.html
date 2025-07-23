@@ -2,8 +2,8 @@
   <h2
     class="text-2xl font-bold mb-4"
     aria-label="Click to navigate"
-    routerLink="/dashboard/home"
-    routerLinkActive=""
+    routerLink="home"
+    (click)="linkClicked.emit()"
   >
     TeamFlow
   </h2>
@@ -13,6 +13,7 @@
         routerLink="home"
         routerLinkActive="font-bold text-purple-200"
         [routerLinkActiveOptions]="{ exact: true }"
+        (click)="linkClicked.emit()"
         >Home</a
       >
     </li>
@@ -21,6 +22,7 @@
         routerLink="team"
         [routerLinkActiveOptions]="{ exact: true }"
         routerLinkActive="font-bold text-purple-200"
+        (click)="linkClicked.emit()"
         >Team</a
       >
     </li>

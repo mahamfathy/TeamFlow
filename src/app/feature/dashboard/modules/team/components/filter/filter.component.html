@@ -1,7 +1,7 @@
-<mat-form-field appearance="fill">
+<mat-form-field appearance="fill" class="custom-purple-select">
   <mat-label>Filter by role</mat-label>
   <mat-select (selectionChange)="onFilterChange($event.value)">
-    @for ( option of filterOption; track option) {
+    @for (option of filterOption; track option) {
     <mat-option [value]="option">{{ option }}</mat-option>
     }
   </mat-select>

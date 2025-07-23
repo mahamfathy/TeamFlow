@@ -1,5 +1,5 @@
 <table
-  class="min-w-full divide-y divide-gray-200 shadow-lg rounded-lg overflow-hidden"
+  class="text-center min-w-full divide-y divide-gray-200 shadow-lg rounded-lg overflow-hidden"
 >
   <thead class="bg-purple-600 text-white">
     <tr>
@@ -29,13 +29,13 @@
   <tbody class="bg-white divide-y divide-gray-100">
     @for (member of members; track member.id) {
     <tr (click)="selectMember(member)">
-      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+      <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-900">
         {{ member.name }}
       </td>
-      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+      <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">
         {{ member.role }}
       </td>
-      <td class="px-6 py-4 whitespace-nowrap text-sm">
+      <td class="px-4 py-3 whitespace-nowrap text-sm">
         <span
           [ngClass]="{
             'text-green-600 font-medium': member.status === 'Active',
@@ -45,10 +45,10 @@
           {{ member.status }}
         </span>
       </td>
-      <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+      <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-900">
         {{ member.performance }}%
       </td>
-      <td class="px-6 py-4 whitespace-nowrap text-sm">
+      <td class="px-4 py-3 whitespace-nowrap text-sm">
         <button aria-label="View team member" (click)="selectMember(member)">
           <mat-icon class="text-gray-600 hover:text-purple-800 cursor-pointer"
             >visibility</mat-icon
