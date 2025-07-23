@@ -25,17 +25,18 @@ TeamFlow is a responsive Angular-based team management dashboard that allows you
 
 ## 📁 Architecture Overview
 
-Angular 17 – Framework used for building the application
-Angular Material – For UI components (progress-bar, form fields, etc.)
-Component-Based Structure:
-DashboardComponent: Displays team charts.
-TeamComponent: List and filter users by role.
-SidebarComponent: Layout and navigation.
-Routing: Implemented for navigation between pages.
-shared: Shared module and components used across the app.
-shared.module.ts: Declares and exports shared resources.
-interfaces: Interface for team member data.
-services: Service to fetch and manage team data.
+- Angular 17 – Framework used for building the application Angular - - Material – For UI components (progress-bar, form fields, etc.)
+
+#### Component-Based Structure:
+
+- DashboardComponent: Displays team charts.
+- TeamComponent: List and filter users by role.
+- SidebarComponent: Layout and navigation.
+- Routing: Implemented for navigation between pages.
+- shared: Shared module and components used across the app.
+- shared.module.ts: Declares and exports shared resources.
+- interfaces: Interface for team member data.
+- services: Service to fetch and manage team data.
 
 ## 📌 Assumptions Made
 
