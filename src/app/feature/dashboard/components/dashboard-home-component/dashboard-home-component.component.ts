@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   OnDestroy,
   OnInit,
@@ -9,6 +10,7 @@ import { ChartConfiguration, ChartData, ChartOptions } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { Subject } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';
+import Typewriter from 't-writer.js';
 import { TeamMember } from '../../modules/team/interfaces/team';
 import { TeamService } from '../../modules/team/services/team.service';
 
@@ -17,7 +19,9 @@ import { TeamService } from '../../modules/team/services/team.service';
   templateUrl: './dashboard-home-component.component.html',
   styleUrls: ['./dashboard-home-component.component.scss'],
 })
-export class DashboardHomeComponentComponent implements OnInit, OnDestroy {
+export class DashboardHomeComponentComponent
+  implements OnInit, AfterViewInit, OnDestroy
+{
   @ViewChildren(BaseChartDirective)
   charts!: QueryList<BaseChartDirective>;
 
@@ -129,6 +133,21 @@ export class DashboardHomeComponentComponent implements OnInit, OnDestroy {
       .subscribe();
   }
 
+  ngAfterViewInit(): void {
+    const target = document.querySelector('.typewriter');
+
+    const writer = new Typewriter(target, {
+      loop: true,
+      typeColor: '#6b21a8',
+    });
+
+    writer
+      .type('Welcome to Teamflow Dashboard')
+      .rest(1500)
+      .remove('Welcome to Teamflow Dashboard'.length)
+      .rest(500)
+      .start();
+  }
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
