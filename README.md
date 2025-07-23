@@ -6,10 +6,10 @@ TeamFlow is a responsive Angular-based team management dashboard that allows you
 
 1. **Clone the repository**
    `git clone https://github.com/your-username/teamflow-dashboard.git`
-
    `cd teamflow-dashboard`
 
 2. **Install dependencies**
+   ``
    `npm install`
 
 3. **Run development server**
