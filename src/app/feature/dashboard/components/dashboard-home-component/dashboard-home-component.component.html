@@ -20,10 +20,28 @@
     </div>
   </div>
 </div>
-<canvas
-  baseChart
-  [data]="barChartData"
-  [options]="barChartOptions"
-  [type]="'bar'"
->
-</canvas>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">
+  <!-- Team Roles Chart -->
+  <div class="bg-white p-4 rounded-xl shadow-md">
+    <h3 class="text-xl font-semibold mb-4 text-purple-700">Team Roles</h3>
+    <canvas
+      baseChart
+      [data]="barChartData"
+      [options]="barChartOptions"
+      [type]="'bar'"
+    ></canvas>
+  </div>
+
+  <!-- Performance Chart -->
+  <div class="bg-white p-4 rounded-xl shadow-md">
+    <h3 class="text-xl font-semibold mb-4 text-indigo-600">
+      Performance Overview
+    </h3>
+    <canvas
+      baseChart
+      [data]="performanceChartData"
+      [options]="performanceChartOptions"
+      [type]="'doughnut'"
+    ></canvas>
+  </div>
+</div>
