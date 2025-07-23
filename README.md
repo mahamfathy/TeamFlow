@@ -5,7 +5,7 @@ TeamFlow is a responsive Angular-based team management dashboard that allows you
 ## ⚙️ Setup Instructions
 
 1. **Clone the repository**
-   `git clone https://github.com/your-username/teamflow-dashboard.git`
+   `git clone https://github.com/mahamfathy/TeamFlow.git`
    `cd teamflow-dashboard`
 
 2. **Install dependencies**
@@ -92,10 +92,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 👤 Developed By
 
-Maha Fathy – Frontend Developer  
-👤https://mahaa-portfolio.netlify.app/
-📧 mahafathyh@gmail.com  
-🌍 Egypt
+Maha Fathy – Frontend Developer
+
+- 👤https://mahaa-portfolio.netlify.app/
+- 📧 mahafathyh@gmail.com  
+  🌍 Egypt
 
 ---
 
