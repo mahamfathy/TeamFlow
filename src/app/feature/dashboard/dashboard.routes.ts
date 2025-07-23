@@ -11,10 +11,12 @@ export const routes: Routes = [
       {
         path: 'home',
         component: DashboardHomeComponentComponent,
+        data: { animation: 'HomePage' },
       },
       {
         path: 'team',
         component: TeamComponent,
+        data: { animation: 'TeamPage' },
       },
       {
         path: '',
