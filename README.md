@@ -9,7 +9,7 @@ TeamFlow is a responsive Angular-based team management dashboard that allows you
    `cd teamflow-dashboard`
 
 2. **Install dependencies**
-   ``
+   ``bash
    `npm install`
 
 3. **Run development server**
