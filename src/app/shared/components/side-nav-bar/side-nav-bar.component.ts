@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav-bar',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './side-nav-bar.component.html',
   styleUrl: './side-nav-bar.component.scss',
 })
-export class SideNavBarComponent {}
+export class SideNavBarComponent {
+  @Output() linkClicked = new EventEmitter<void>();
+}
