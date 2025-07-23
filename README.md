@@ -95,10 +95,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Maha Fathy – Frontend Developer
 
 - 👤https://mahaa-portfolio.netlify.app/
-- 📧 mahafathyh@gmail.com  
-  🌍 Egypt
-
----
+- 📧 mahafathyh@gmail.com
+- 🌍 Egypt
 
 ## 📃 License
 
