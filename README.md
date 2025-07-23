@@ -93,7 +93,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## 👤 Developed By
 
 Maha Fathy – Frontend Developer  
-📧 maha@example.com  
+👤https://mahaa-portfolio.netlify.app/
+📧 mahafathyh@gmail.com  
 🌍 Egypt
 
 ---
