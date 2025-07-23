@@ -32,4 +32,4 @@ This project follows accessibility best practices:
 
 - Used semantic HTML tags for better screen reader compatibility.
 - Added appropriate `aria-label`s to important interactive elements.
-- Ensured keyboard navigation across all components (buttons, filters, etc).
+- Ensured keyboard navigation across team component (buttons, filters, etc).
