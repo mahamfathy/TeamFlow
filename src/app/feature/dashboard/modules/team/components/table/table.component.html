@@ -1,34 +1,27 @@
 <table
   class="text-center min-w-full divide-y divide-gray-200 shadow-lg rounded-lg overflow-hidden"
 >
-  <thead class="bg-purple-600 text-white">
+  <thead
+    class="bg-gradient-to-r from-purple-700 via-purple-600 to-purple-500 text-white"
+  >
     <tr>
-      <th
-        class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider"
-      >
-        Name
+      @for (key of getKeys() ; track key) {
+
+      <th class="px-6 py-3 text-sm font-semibold capitalize tracking-wider">
+        {{ key }}
       </th>
-      <th
-        class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider"
-      >
-        Role
-      </th>
-      <th
-        class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider"
-      >
-        Status
-      </th>
-      <th
-        class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider"
-      >
-        Performance
-      </th>
+      }
+
       <th></th>
     </tr>
   </thead>
   <tbody class="bg-white divide-y divide-gray-100">
     @for (member of members; track member.id) {
-    <tr (click)="selectMember(member)">
+    <tr
+      title="Press here for more info"
+      (click)="selectMember(member)"
+      class="cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-gray-100"
+    >
       <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-900">
         {{ member.name }}
       </td>

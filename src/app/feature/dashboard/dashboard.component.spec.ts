@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TeamMember } from '../../feature/dashboard/modules/team/interfaces/team';
 import { TeamMemberCardComponent } from './modules/team/components/team-member-card/team-member-card.component';
+import { TeamMember } from './modules/team/interfaces/team-member.interface';
 
 describe('TeamMemberCardComponent', () => {
   let component: TeamMemberCardComponent;

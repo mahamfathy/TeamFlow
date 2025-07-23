@@ -7,7 +7,13 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  HostListener,
+  OnInit,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -76,14 +82,22 @@ import { RouterOutlet } from '@angular/router';
     ]),
   ],
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
   isSidebarOpen: boolean = false;
   isMobile: boolean = false;
   sidebarShouldBeHidden = false;
+  routeAnimationState: string | undefined;
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.isMobile = window.innerWidth < 768;
+    this.routeAnimationState = 'HomePage';
   }
+  ngAfterViewInit() {
+    this.routeAnimationState = 'HomePage';
+    this.cdr.detectChanges();
+  }
+
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }

@@ -6,7 +6,7 @@ import {
   Input,
   Output,
 } from '@angular/core';
-import { TeamMember } from '../../interfaces/team';
+import { TeamMember } from '../../interfaces/team-member.interface';
 
 @Component({
   selector: 'app-team-member-card',

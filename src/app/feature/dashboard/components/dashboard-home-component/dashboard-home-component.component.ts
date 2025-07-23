@@ -11,7 +11,8 @@ import { BaseChartDirective } from 'ng2-charts';
 import { Subject } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';
 import Typewriter from 't-writer.js';
-import { TeamMember } from '../../modules/team/interfaces/team';
+import { CardInfo } from '../../interfaces/card-info.interface';
+import { TeamMember } from '../../modules/team/interfaces/team-member.interface';
 import { TeamService } from '../../modules/team/services/team.service';
 
 @Component({
@@ -26,7 +27,20 @@ export class DashboardHomeComponentComponent
   charts!: QueryList<BaseChartDirective>;
 
   private destroy$ = new Subject<void>();
-
+  cards: CardInfo[] = [
+    {
+      title: 'Overview',
+      content: 'Some overview stats or message here.',
+    },
+    {
+      title: 'Team Summary',
+      content: 'Quick summary about your team.',
+    },
+    {
+      title: 'Notifications',
+      content: 'You have 5 unread notifications.',
+    },
+  ];
   teamMembers: TeamMember[] = [];
 
   // Chart 1: Team Roles
@@ -138,7 +152,7 @@ export class DashboardHomeComponentComponent
 
     const writer = new Typewriter(target, {
       loop: true,
-      typeColor: '#6b21a8',
+      typeColor: '',
     });
 
     writer

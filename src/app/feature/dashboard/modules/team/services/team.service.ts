@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { TeamMember } from '../interfaces/team';
+import { TeamMember } from '../interfaces/team-member.interface';
 
 @Injectable({
   providedIn: 'root',

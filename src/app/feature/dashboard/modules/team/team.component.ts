@@ -3,7 +3,7 @@ import { SharedModule } from '../../../../shared/shared.module';
 import { FilterComponent } from './components/filter/filter.component';
 import { TableComponent } from './components/table/table.component';
 import { TeamMemberCardComponent } from './components/team-member-card/team-member-card.component';
-import { TeamMember } from './interfaces/team';
+import { TeamMember } from './interfaces/team-member.interface';
 import { TeamService } from './services/team.service';
 
 @Component({

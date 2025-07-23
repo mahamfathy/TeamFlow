@@ -30,6 +30,12 @@
       <div class="w-full bg-gray-200 rounded-full h-3 relative">
         <div
           class="bg-green-500 h-3 rounded-full"
+          [ngClass]="{
+            'bg-green-500': member.performance >= 70,
+            'bg-yellow-400':
+              member.performance >= 40 && member.performance < 70,
+            'bg-red-500': member.performance < 40
+          }"
           [style.width.%]="member.performance"
         ></div>
         <span
